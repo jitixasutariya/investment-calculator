@@ -1,0 +1,155 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.investment-container {
+  padding: 30px;
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  transition: transform 0.6s, filter 0.3s;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.logo:hover {
+  transform: rotateY(180deg);
+  filter: brightness(1.2);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+#user-input {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 3rem;
+  background: linear-gradient(135deg, #9fe2bf 0%, #c1e1c1 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#user-input:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+input {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  background: linear-gradient(135deg, #fff, #f9f9f9);
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
+  outline: none;
+}
+
+input:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+input:focus + label {
+  color: var(--primary-color);
+}
+
+.button {
+  background-color: #9fe2bf; /* Green background */
+  border: none; /* Remove borders */
+  color: black; /* White text */
+  padding: 15px 100px; /* Add some padding */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make the link block level */
+  font-size: 20px; /* Increase the font size */
+  font-weight: 600;
+  margin: 10px 2px; /* Add some margin */
+  cursor: pointer; /* Add a pointer on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: linear-gradient(135deg, #9fe2bf 0%, #c1e1c1 100%);
+}
+
+@media (max-width: 768px) {
+  #user-input {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .input-group {
+    grid-template-columns: 2fr;
+    gap: 1rem;
+  }
+
+  input {
+    padding: 0.5rem;
+  }
+}
